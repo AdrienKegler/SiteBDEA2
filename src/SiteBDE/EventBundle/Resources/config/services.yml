@@ -1,0 +1,4 @@
+services:
+#    site_bde_event.example:
+#        class: SiteBDE\EventBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

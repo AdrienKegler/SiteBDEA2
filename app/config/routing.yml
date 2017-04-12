@@ -1,3 +1,23 @@
+site_bde_user_system:
+    resource: "@SiteBDEUserSystemBundle/Resources/config/routing.yml"
+    prefix:   /
+
+site_bde_news:
+    resource: "@SiteBDENewsBundle/Resources/config/routing.yml"
+    prefix:   /
+
+site_bde_event:
+    resource: "@SiteBDEEventBundle/Resources/config/routing.yml"
+    prefix:   /
+
+site_bde_shop:
+    resource: "@SiteBDEShopBundle/Resources/config/routing.yml"
+    prefix:   /
+
+site_bde_home_page:
+    resource: "@SiteBDEHomePageBundle/Resources/config/routing.yml"
+    prefix:   /
+
 app:
     resource: '@AppBundle/Controller/'
     type: annotation

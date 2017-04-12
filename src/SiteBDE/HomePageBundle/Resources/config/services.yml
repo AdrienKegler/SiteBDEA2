@@ -1,0 +1,4 @@
+services:
+#    site_bde_home_page.example:
+#        class: SiteBDE\HomePageBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

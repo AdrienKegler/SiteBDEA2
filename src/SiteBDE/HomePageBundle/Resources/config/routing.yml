@@ -1,0 +1,3 @@
+site_bde_home_page_homepage:
+    path:     /
+    defaults: { _controller: SiteBDEHomePageBundle:Default:index }
