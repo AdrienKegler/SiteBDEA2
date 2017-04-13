@@ -1,0 +1,116 @@
+body{
+	height: 150vh;
+	width: 100vw;
+}
+header {
+	z-index:100;
+	position: fixed;
+	top: 0;
+    left: 0;
+    width: 100vw;
+}
+
+nav {
+	border-color: #b3ffff;
+	border-style: dashed;
+	background-color: #b3ffff;
+	padding: 3vh;
+	
+}
+
+nav ul {
+
+	list-style: none;
+	font-weight: bold;
+	font-size: 24px;
+}
+
+nav ul li {
+	text-align: center;
+	margin: 0vw 20vw;
+	list-style: none;
+
+}
+
+nav ul li a:hover{
+	text-decoration: none;
+	color: #d33b26;
+}
+nav a{
+	color: #001a1a;
+}
+
+article{
+
+	text-align: center;
+	position: static;
+}
+
+article h1:hover{
+	text-decoration: none;
+	color: #d33b26;
+
+}
+article a{
+	color: #001a1a;
+}
+
+section {
+
+}
+
+footer {
+	width: 100vw;
+	position: static;
+	text-align: center;
+	color: #d33b26;
+	border-style: ridge;
+	border-color: black;
+	text-align: center;
+     
+}
+
+.Title{
+	background-color: white;
+	position: static;
+	border-style: ridge;
+	border-color: black;
+	text-align: center;
+
+}
+article .container{
+	
+	position: static;
+	padding: 50vh;
+	width: 100vw;
+	height: 100vh;
+
+}
+footer .row{
+	position: static;
+	
+
+}
+.container{
+
+	padding: 20vh;
+	position: static;
+	border-style: ridge;
+	border-color: black;
+
+
+}
+article p .container{
+	position: static;
+
+}
+.moi{
+	margin: auto;
+	position: static;
+	border-style: ridge;
+	border-color: black;
+	width: 30vw;
+}
+h3:hover{
+	color: #d33b26;
+}
