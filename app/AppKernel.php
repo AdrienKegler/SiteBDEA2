@@ -20,9 +20,7 @@ class AppKernel extends Kernel
             new SiteBDE\ShopBundle\SiteBDEShopBundle(),
             new SiteBDE\EventBundle\SiteBDEEventBundle(),
             new SiteBDE\NewsBundle\SiteBDENewsBundle(),
-            new SiteBDE\UserSystemBundle\SiteBDEUserSystemBundle(),
-
-            new KMS\FroalaEditorBundle\KMSFroalaEditorBundle()
+            new SiteBDE\UserSystemBundle\SiteBDEUserSystemBundle()
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

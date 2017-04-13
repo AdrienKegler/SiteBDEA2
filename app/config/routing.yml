@@ -17,7 +17,3 @@ site_bde_news:
 site_bde_event:
     resource: "@SiteBDEEventBundle/Resources/config/routing.yml"
     prefix:   /Event
-
-kms_froala_editor:
-  resource: "@KMSFroalaEditorBundle/Resources/config/routing.yml"
-  prefix:   /froalaeditor

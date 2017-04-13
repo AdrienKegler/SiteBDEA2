@@ -1,3 +1,4 @@
 site_bde_shop_homepage:
     path:     /Home
     defaults: { _controller: SiteBDEShopBundle:ShopHome:index }
+
