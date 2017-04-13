@@ -1,22 +1,22 @@
-site_bde_user_system:
-    resource: "@SiteBDEUserSystemBundle/Resources/config/routing.yml"
-    prefix:   /
-
-site_bde_news:
-    resource: "@SiteBDENewsBundle/Resources/config/routing.yml"
-    prefix:   /
-
-site_bde_event:
-    resource: "@SiteBDEEventBundle/Resources/config/routing.yml"
-    prefix:   /
-
 site_bde_shop:
     resource: "@SiteBDEShopBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /Shop
 
 site_bde_home_page:
     resource: "@SiteBDEHomePageBundle/Resources/config/routing.yml"
     prefix:   /
+
+site_bde_user_system:
+    resource: "@SiteBDEUserSystemBundle/Resources/config/routing.yml"
+    prefix:   /User
+
+site_bde_news:
+    resource: "@SiteBDENewsBundle/Resources/config/routing.yml"
+    prefix:   /News
+
+site_bde_event:
+    resource: "@SiteBDEEventBundle/Resources/config/routing.yml"
+    prefix:   /Event
 
 kms_froala_editor:
   resource: "@KMSFroalaEditorBundle/Resources/config/routing.yml"
