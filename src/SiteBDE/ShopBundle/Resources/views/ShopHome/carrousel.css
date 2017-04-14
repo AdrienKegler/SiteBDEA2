@@ -1,0 +1,14 @@
+
+.item img {
+  background:url(path-to-image) no-repeat center center;
+  background-size:100% auto;
+}
+@media(max-width:800px){
+  .item img {
+    background-size:800px 300px;
+    min-height: 300px; 
+  } 
+ .carousel-inner > .item > img {
+    margin: 0 auto;
+}
+}
