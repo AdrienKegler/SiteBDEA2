@@ -2,3 +2,9 @@ site_bde_shop_homepage:
     path:     /Home
     defaults: { _controller: SiteBDEShopBundle:ShopHome:index }
 
+site_bde_shop_article:
+    path:     /Article
+    defaults: { _controller: SiteBDEShopBundle:Article:index }
+
+
+
