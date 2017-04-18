@@ -1,3 +1,3 @@
 site_bde_event_homepage:
-    path:     /
-    defaults: { _controller: SiteBDEEventBundle:Default:index }
+    path:     /Event
+    defaults: { _controller: SiteBDEEventBundle:Event:index }
