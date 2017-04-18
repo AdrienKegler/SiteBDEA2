@@ -2,7 +2,9 @@ site_bde_event_homepage:
     path:     /Event
     defaults: { _controller: SiteBDEEventBundle:Event:index }
 
-    site_bde_event_homepage:
-    path:     /FormulaireEvent
-    defaults: { _controller: SiteBDEEventBundle:FormulaireEvent:index }
+site_bde_event_Form:
+    path:     /FormEvent
+    defaults: { _controller: SiteBDEEventBundle:FormEvent:index }
 
+
+ 

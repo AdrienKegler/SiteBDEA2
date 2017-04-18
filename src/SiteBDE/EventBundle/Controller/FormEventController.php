@@ -4,11 +4,11 @@ namespace SiteBDE\EventBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class FormulaireEventController extends Controller
+class FormEventController extends Controller
 {
     public function indexAction()
     {
         return $this
-        		->render('SiteBDEEventBundle:FormulaireEvent:FormulaireEvent.html.twig');
+        		->render('SiteBDEEventBundle:FormEvent:FormEvent.html.twig');
     }
 }
