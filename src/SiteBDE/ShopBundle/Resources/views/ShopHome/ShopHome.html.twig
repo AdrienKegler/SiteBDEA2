@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="{{ asset('bundles/ocplatform/css/ShopHome.css') }}" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="/asset/css/ShopHome.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="{{ asset('css/carrousel.css') }}">
+	<!-- <link rel="stylesheet" type="text/css" href=""> -->
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+	<title>Shop</title>
+</head>
+<body>
+
+	<header>
+		<nav class="navbar navbar-inverse navbar-custom navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">BDE CESI Lyon</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                   
+                    <li>
+                        <a class="page-scroll" href="#">Login</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#">Sign in</a>
+                    </li>
+                     <li>
+                        <a class="page-scroll" href="#">Panier</a>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-right inline-form">
+                    <div class="form-group">
+                          <input type="search" class="input-sm form-control" placeholder="Search">
+                          <button type="submit" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-eye-open"></span> Search</button>
+                    </div>
+                  </form>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+	</header>
+
+	<section>
+		<br>
+		<article>
+			<div class="jumbotron">
+			<div class="container">
+  			<h1>Welcome in the shop !</h1>
+  			</div>
+  			</div>
+		</article>
+	</section>
+
+
+
+	<section>
+		<article>
+	<div class="container">
+      
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Food</h2>
+          <p>Are you hungry ? </p>
+          <p><a class="btn btn-default" href="#food" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Goodies</h2>
+          <p>Wanna a sweat ? </p>
+          <p><a class="btn btn-default" href="#goodies" role="button">View details &raquo;</a></p>
+       </div>
+        <div class="col-md-4">
+          <h2>Event</h2>
+          <p>Here to buy some ticket</p>
+          <p><a class="btn btn-default" href="#event" role="button">View details &raquo;</a></p>
+        </div>
+      </div>
+			
+	</div>
+		</article>
+	</section>
+
+	<section>
+		<article>
+			<div class="page-header">
+        <h1 id="food">Food</h1>
+			
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+   
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="borea.jpg" alt="sandwich">
+    </div>
+
+    <div class="item">
+      <img src="nouille.jpg" alt="nouille">
+    </div>
+
+    <div class="item">
+      <img src="pic.png" alt="sandwich">
+    </div>
+
+    <div class="item">
+      <img src="sandwich.jpg" alt="sandwich">
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+		</article>
+
+		<article>
+			<div class="page-header">
+        <h1 id="goodies">Goodies</h1>
+		
+    <div id="myCarousela" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousela" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousela" data-slide-to="1"></li>
+    <li data-target="#myCarousela" data-slide-to="2"></li>
+    <li data-target="#myCarousela" data-slide-to="3"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="superman.jpg" alt="sweat a capuche">
+    </div>
+
+    <div class="item">
+      <img src="sweat.jpg" alt="sweat">
+    </div>
+
+    <div class="item">
+      <img src="panda.jpg" alt="sweat">
+    </div>
+
+    <div class="item">
+      <img src="ours.jpg" alt="t-shirt">
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousela" role="button" data-slide="prev">
+    <span id="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousela" role="button" data-slide="next">
+    <span id="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+		</article>
+
+		<article>
+			<div class="page-header">
+        <h1 id="event">Event</h1>	
+   	
+    <div id="myCarouselb" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarouselb" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarouselb" data-slide-to="1"></li>
+    <li data-target="#myCarouselb" data-slide-to="2"></li>
+    <li data-target="#myCarouselb" data-slide-to="3"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="admit.png" alt="ticket">
+    </div>
+
+    <div class="item">
+      <img src="or.jpg" alt="gold ticket">
+    </div>
+
+    <div class="item">
+      <img src="ticket.png" alt="ticket">
+    </div>
+
+    <div class="item">
+      <img src="ticket.jpg" alt="ticket">
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarouselb" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarouselb" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+		</article>
+	</section>
+
+	
+	<footer>
+        <p><center>&copy; 2017 CaKeChi corporation.</center></p>
+        <p><center>Copyrighted.</center></p>
+      </footer>
+  </div>
+
+
+</body>
+</html>

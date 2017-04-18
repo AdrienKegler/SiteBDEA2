@@ -1,3 +1,11 @@
+site_bde_shop:
+    resource: "@SiteBDEShopBundle/Resources/config/routing.yml"
+    prefix:   /Shop
+
+site_bde_home_page:
+    resource: "@SiteBDEHomePageBundle/Resources/config/routing.yml"
+    prefix:   /
+
 site_bde_user_system:
     resource: "@SiteBDEUserSystemBundle/Resources/config/routing.yml"
     prefix:   /User
@@ -9,6 +17,7 @@ site_bde_news:
 site_bde_event:
     resource: "@SiteBDEEventBundle/Resources/config/routing.yml"
     prefix:   /Event
+<<<<<<< HEAD
 
 site_bde_shop:
     resource: "@SiteBDEShopBundle/Resources/config/routing.yml"
@@ -18,3 +27,5 @@ site_bde_home_page:
     resource: "@SiteBDEHomePageBundle/Resources/config/routing.yml"
     prefix:   /
 
+=======
+>>>>>>> origin/master
