@@ -1,3 +1,3 @@
-site_bde_user_system_homepage:
-    path:     /
-    defaults: { _controller: SiteBDEUserSystemBundle:Default:index }
+site_bde_user_system_inscription:
+    path:     /Register
+    defaults: { _controller: SiteBDEUserSystemBundle:Inscription:index }
