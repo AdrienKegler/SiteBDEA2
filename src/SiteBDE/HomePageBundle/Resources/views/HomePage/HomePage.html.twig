@@ -2,302 +2,329 @@
 
 <html>
 
-<head>
-	<meta charset="utf-8">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<!--<link rel="stylesheet" type="text/css" href="..\..\..\..\..\..\css\HomePage.css">-->
-	<link rel="stylesheet" href="{{ asset('css/HomePage.css') }}" />
-	<link rel="stylesheet" type="text/css" href="css\font-awesome-4.7.0\css\font-awesome.css">
-	<meta name="viewport" content="width=device-width, initial=scale=1.0, shrink-to-fit=no">
-	<title>BDE CESI Lyon</title>
-</head>
+    <head>
+	   <meta charset="utf-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"    crossorigin="anonymous">
+	   <!--<link rel="stylesheet" type="text/css" href="..\..\..\..\..\..\css\HomePage.css">-->
 
-<body>
+        <link rel="stylesheet" href="{{ asset('css/HomePage.css') }}" />
+        <!--jQuery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-
-      <nav class="navbar navbar-inverse navbar-custom navbar-fixed-top">
+	   <link rel="stylesheet" type="text/css" href="css\font-awesome-4.7.0\css\font-awesome.css">
+	   <meta name="viewport" content="width=device-width, initial=scale=1.0, shrink-to-fit=no">
+	   <title>BDE CESI Lyon</title>
+    </head>
+    
+    <body>
+    
+  
+        <nav id="mainNav" class="navbar navbar-inverse navbar-custom navbar-fixed-top">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expended="true">
+                        <span class="sr-only">Toggle navigation</span> Menu
+                    </button>
+                    <a class="navbar-brand page-scroll" href="#page-top">BDE CESI Lyon</a>
+                    <div class="navbar-header">
+                        <!--<a class="navbar-brand page-scroll" href="#page-top">
+                        <img alt="Brand" src="{{ asset('img/logoBDENavBar.png') }}">
+                        </a>-->
+                    </div>
+                </div>
+    
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="hidden">
+                            <a href="#page-top"></a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#truc"><i class="fa fa-info-circle" aria-hidden="true"></i> Information</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#portfolio"><i class="fa fa-newspaper-o" aria-hidden="true"></i> News</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#team"><i class="fa fa-users" aria-hidden="true"></i> BDE</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Shop</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#"><i class="fa fa-sign-in" aria-hidden="true"></i> Sign in</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#"><i class="fa fa-user-circle-o" aria-hidden="true"></i> Login</a>
+                        </li>
+                        
+                    </ul>
+                    <!--
+                    <form class="navbar-form navbar-right inline-form">
+            		  <div class="form-group">
+              			   <input type="search" class="input-sm form-control" placeholder="Search">
+              			   <button type="submit" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-eye-open"></span> Search</button>
+            		  </div>
+          		    </form>
+          		    -->
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+    
+    <!-- Header -->
+        <header>
+            <div class="container">
+        	   <a id="page-top"></a>
+                <div class="intro-text">
+                    <div class="intro-lead-in">BDE CESI Lyon !</div>
+                    <div class="intro-heading">COMMIT PEDERASTE !</div>
+                    <p><a class="btn btn-primary btn-lg page-scroll" href="#truc" role="button"><i class="fa fa-chevron-down fa-2x" aria-hidden="true" href="#truc"></i></a></p>
+                </div>
+            </div>
+        </header>
+    
+    <!--
+        <div class="jumbotron">
         <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#">
-                    <span class="sr-only">Toggle navigation</span> Menu
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">BDE CESI Lyon</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Shop</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#"><i class="fa fa-sign-in" aria-hidden="true"></i> Sign in</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#"><i class="fa fa-user-circle-o" aria-hidden="true"></i> Login</a>
-                    </li>
-                </ul>
-                <!--
-                <form class="navbar-form navbar-right inline-form">
-            		<div class="form-group">
-              			<input type="search" class="input-sm form-control" placeholder="Search">
-              			<button type="submit" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-eye-open"></span> Search</button>
-            		</div>
-          		</form>
-          		-->
-            </div>
-            <!-- /.navbar-collapse -->
+            <h1 class="display-3">Hello, world!</h1>
+            <p>je marque ce que je veux !!!!</p>
+            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
         </div>
-        <!-- /.container-fluid -->
-    </nav>
- 
- <!-- Header -->
-    <header>
-        <div class="container">
-        	<a id="page-top"></a>
-            <div class="intro-text">
-                <div class="intro-lead-in">BDE CESI Lyon !</div>
-                <div class="intro-heading">Banana !</div>
-                <p><a class="btn btn-primary btn-lg" href="#truc" role="button"><i class="fa fa-chevron-down fa-2x" aria-hidden="true" href="#truc"></i></a></p>
-            </div>
         </div>
-    </header>
-
-<!--
-    <div class="jumbotron">
-      <div class="container">
-        <h1 class="display-3">Hello, world!</h1>
-        <p>je marque ce que je veux !!!!</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more »</a></p>
-      </div>
-    </div>
--->
-
-        <section id="truc">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Un truc</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+    -->
+    
+            <section id="truc">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading">Un truc</h2>
+                        <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-4">
+    
+                        <h4 class="service-heading">un machin</h4>
+                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    </div>
+                    <div class="col-md-4">
+    
+                        <h4 class="service-heading">un autre truc</h4>
+                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    </div>
+                    <div class="col-md-4">
+    
+                        <h4 class="service-heading">des choses</h4>
+                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                    </div>
                 </div>
             </div>
-            <div class="row text-center">
-                <div class="col-md-4">
-
-                    <h4 class="service-heading">un machin</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+        </section>
+    
+    
+    
+    
+        <section id="portfolio" class="bg-light-gray">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading">Actualité</h2>
+                        <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    </div>
                 </div>
-                <div class="col-md-4">
-
-                    <h4 class="service-heading">un autre truc</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                </div>
-                <div class="col-md-4">
-
-                    <h4 class="service-heading">des choses</h4>
-                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-
-    <section id="portfolio" class="bg-light-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Actualité</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-chevron-right fa-3x" aria-hidden="true"></i>
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 portfolio-item">
+                        <a href="#" class="portfolio-link" data-toggle="modal">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fa fa-chevron-right fa-3x" aria-hidden="true"></i>
+                                </div>
                             </div>
+                            <img src="{{ asset('img/imagePrincipale.jpg') }}" class="img-responsive" alt="">
+                        </a>
+                        <div class="portfolio-caption">
+                            <h4>Event</h4>
+                            <p class="text-muted">Event Type</p>
                         </div>
-                        <img src="{{ asset('img/imagePrincipale.jpg') }}" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Event</h4>
-                        <p class="text-muted">Event Type</p>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-chevron-right fa-3x" aria-hidden="true"></i>
+                    <div class="col-md-4 col-sm-6 portfolio-item">
+                        <a href="#" class="portfolio-link" data-toggle="modal">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fa fa-chevron-right fa-3x" aria-hidden="true"></i>
+                                </div>
                             </div>
+                            <img src="{{ asset('img/imagePrincipale.jpg') }}" class="img-responsive" alt="">
+                        </a>
+                        <div class="portfolio-caption">
+                            <h4>Event</h4>
+                            <p class="text-muted">Event type</p>
                         </div>
-                        <img src="{{ asset('img/imagePrincipale.jpg') }}" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Event</h4>
-                        <p class="text-muted">Event type</p>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-chevron-right fa-3x" aria-hidden="true"></i>
+                    <div class="col-md-4 col-sm-6 portfolio-item">
+                        <a href="#" class="portfolio-link" data-toggle="modal">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fa fa-chevron-right fa-3x" aria-hidden="true"></i>
+                                </div>
                             </div>
+                            <img src="{{ asset('img/imagePrincipale.jpg') }}" class="img-responsive" alt="">
+                        </a>
+                        <div class="portfolio-caption">
+                            <h4>Event</h4>
+                            <p class="text-muted">Event type</p>
                         </div>
-                        <img src="{{ asset('img/imagePrincipale.jpg') }}" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Event</h4>
-                        <p class="text-muted">Event type</p>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-chevron-right fa-3x" aria-hidden="true"></i>
+                    <div class="col-md-4 col-sm-6 portfolio-item">
+                        <a href="#" class="portfolio-link" data-toggle="modal">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fa fa-chevron-right fa-3x" aria-hidden="true"></i>
+                                </div>
                             </div>
+                            <img src="{{ asset('img/imagePrincipale.jpg') }}" class="img-responsive" alt="">
+                        </a>
+                        <div class="portfolio-caption">
+                            <h4>Event</h4>
+                            <p class="text-muted">Event type</p>
                         </div>
-                        <img src="{{ asset('img/imagePrincipale.jpg') }}" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Event</h4>
-                        <p class="text-muted">Event type</p>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-chevron-right fa-3x" aria-hidden="true"></i>
+                    <div class="col-md-4 col-sm-6 portfolio-item">
+                        <a href="#" class="portfolio-link" data-toggle="modal">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fa fa-chevron-right fa-3x" aria-hidden="true"></i>
+                                </div>
                             </div>
+                            <img src="{{ asset('img/imagePrincipale.jpg') }}" class="img-responsive" alt="">
+                        </a>
+                        <div class="portfolio-caption">
+                            <h4>Event</h4>
+                            <p class="text-muted">Event type</p>
                         </div>
-                        <img src="{{ asset('img/imagePrincipale.jpg') }}" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Event</h4>
-                        <p class="text-muted">Event type</p>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-chevron-right fa-3x" aria-hidden="true"></i>
+                    <div class="col-md-4 col-sm-6 portfolio-item">
+                        <a href="#" class="portfolio-link" data-toggle="modal">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fa fa-chevron-right fa-3x" aria-hidden="true"></i>
+                                </div>
                             </div>
+                            <img src="{{ asset('img/imagePrincipale.jpg') }}" class="img-responsive" alt="">
+                        </a>
+                        <div class="portfolio-caption">
+                            <h4>Event</h4>
+                            <p class="text-muted">Event type</p>
                         </div>
-                        <img src="{{ asset('img/imagePrincipale.jpg') }}" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Event</h4>
-                        <p class="text-muted">Event type</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-
-    <section id="team">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Team du BDE</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="team-member">
-                        <img src="{{ asset('img/imagePrincipale.jpg') }}" class="img-responsive img-circle" alt="">
-                        <h4>Bob</h4>
-                        <p class="text-muted">c'est qui ?</p>
-                        <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul>
+        </section>
+    
+    
+        <section id="team">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading">Team du BDE</h2>
+                        <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                     </div>
                 </div>
-                <div class="col-sm-4">
-                    <div class="team-member">
-                        <img src="{{ asset('img/imagePrincipale.jpg') }}" class="img-responsive img-circle" alt="">
-                        <h4>Bob</h4>
-                        <p class="text-muted">c'est qui ?</p>
-                        <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="team-member">
+                            <img src="{{ asset('img/imagePrincipale.jpg') }}" class="img-responsive img-circle" alt="">
+                            <h4>Bob</h4>
+                            <p class="text-muted">c'est qui ?</p>
+                            <ul class="list-inline social-buttons">
+                                <li><a href="#"><i class="fa fa-twitter"></i></a>
+                                </li>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a>
+                                </li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="team-member">
+                            <img src="{{ asset('img/imagePrincipale.jpg') }}" class="img-responsive img-circle" alt="">
+                            <h4>Bob</h4>
+                            <p class="text-muted">c'est qui ?</p>
+                            <ul class="list-inline social-buttons">
+                                <li><a href="#"><i class="fa fa-twitter"></i></a>
+                                </li>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a>
+                                </li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="team-member">
+                            <img src="{{ asset('img/imagePrincipale.jpg') }}" class="img-responsive img-circle" alt="">
+                            <h4>Bob</h4>
+                            <p class="text-muted">c'est qui ?</p>
+                            <ul class="list-inline social-buttons">
+                                <li><a href="#"><i class="fa fa-twitter"></i></a>
+                                </li>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a>
+                                </li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                <div class="col-sm-4">
-                    <div class="team-member">
-                        <img src="{{ asset('img/imagePrincipale.jpg') }}" class="img-responsive img-circle" alt="">
-                        <h4>Bob</h4>
-                        <p class="text-muted">c'est qui ?</p>
-                        <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul>
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias  ut unde.</p>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+        </section>
+    
+    
+
+        <aside class="clients">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <a href="#">
+                            <img src="{{ asset('img/imagePrincipale.jpg') }}" class="img-responsive img-centered" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <a href="#">
+                            <img src="{{ asset('img/imagePrincipale.jpg') }}" class="img-responsive img-centered" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <a href="#">
+                            <img src="{{ asset('img/imagePrincipale.jpg') }}" class="img-responsive img-centered" alt="">
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <a href="#">
+                            <img src="{{ asset('img/imagePrincipale.jpg') }}" class="img-responsive img-centered" alt="">
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </aside>
 
+    </body>
 
-    <aside class="clients">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img src="{{ asset('img/imagePrincipale.jpg') }}" class="img-responsive img-centered" alt="">
-                    </a>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img src="{{ asset('img/imagePrincipale.jpg') }}" class="img-responsive img-centered" alt="">
-                    </a>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img src="{{ asset('img/imagePrincipale.jpg') }}" class="img-responsive img-centered" alt="">
-                    </a>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img src="{{ asset('img/imagePrincipale.jpg') }}" class="img-responsive img-centered" alt="">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </aside>
-
-
-
-</body>
+    
+    
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" integrity="sha384-mE6eXfrb8jxl0rzJDBRanYqgBxtJ6Unn4/1F7q4xRRyIw7Vdg9jP4ycT7x1iVsgb" crossorigin="anonymous"></script>
+    <!--NavBar-->
+    <script src="{{ asset('js/HomePage.min.js') }}"></script>
 </html>
