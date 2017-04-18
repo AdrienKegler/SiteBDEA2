@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+   
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome-4.7.0/css/font-awesome.css')}}">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <title>Register</title>
+</head>
+<body>
+        <header>
+        <nav id="mainNav" class="navbar navbar-inverse navbar-custom navbar-fixed-top">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expended="true">
+                        <span class="sr-only">Toggle navigation</span> Menu
+                    </button>
+                    <a class="navbar-brand page-scroll" href="#page-top">BDE CESI Lyon</a>
+                    <div class="navbar-header">
+                        <!--<a class="navbar-brand page-scroll" href="#page-top">
+                        <img alt="Brand" src="{{ asset('img/logoBDENavBar.png') }}">
+                        </a>-->
+                    </div>
+                </div>
+    
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="hidden">
+                            <a href="#page-top"></a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#truc"><i class="fa fa-info-circle" aria-hidden="true"></i> Information</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#portfolio"><i class="fa fa-newspaper-o" aria-hidden="true"></i> News</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#team"><i class="fa fa-users" aria-hidden="true"></i> BDE</a>
+                        </li>
+                        
+                    </ul>
+                    <!--
+                    <form class="navbar-form navbar-right inline-form">
+            		  <div class="form-group">
+              			   <input type="search" class="input-sm form-control" placeholder="Search">
+              			   <button type="submit" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-eye-open"></span> Search</button>
+            		  </div>
+          		    </form>
+          		    -->
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+    </header>
+
+        <hr>
+    <div class="container">
+
+      <form class="form-signin">
+        <h1 class="form-signin-heading">Please sign in</h1>
+
+       <h4> Informations </h4>
+        <input type="name" id="inputName" class="form-control" placeholder="Name" required autofocus>
+        <label for="inputName" class="sr-only">Name</label>
+<hr>
+		<input type="last name" id="inputLastname" class="form-control" placeholder="Last name" required autofocus>
+        <label for="inputlastname" class="sr-only">Last name</label>
+<hr>
+         <label for="inputPseudonyme" class="sr-only">Pseudonyme</label>
+        <input type="pseudonyme" id="inputPseudo" class="form-control" placeholder="Pseudonyme" required autofocus>
+<hr>
+	
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+
+<hr>
+
+		<input type="Age" id="inputAge" class="form-control" placeholder="Date of birth" required autofocus>
+        <label for="inputDateofbirth" class="sr-only">Date of birth</label>
+<hr>
+	<h4>Password</h4>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+<hr>
+        <input type="confirmationpassword" id="confirmation" class="form-control" placeholder="Confirm your password" required autofocus>
+        <label for="inputPassword" class="sr-only">Confirmation Password</label>
+<hr>
+        
+		
+		<div>
+			<h4>Gender</h4>
+	<label class="radio-inline">
+  <input required autofocus type="radio" name="inlineRadioSexe" id="Female" value="sexe"> Male
+</label>
+</div>
+<div>
+  <label class="radio-inline">
+  <input required autofocus type="radio" name="inlineRadioSexe" id="Male" value="sexe"> Female
+</label>
+</div>
+<hr>
+<h4>School</h4>
+        <label class="radio-inline">
+  <input type="radio" name="inlineRadioSchool" id="inlineRadio1" value="option1"> Exia
+</label>
+<label class="radio-inline">
+  <input  type="radio" name="inlineRadioSchool" id="inlineRadio2" value="option2"> CPTEI
+</label>
+<label class="radio-inline">
+  <input type="radio" name="inlineRadioSchool" id="inlineRadio3" value="option3"> Alternant
+</label>
+<hr>
+<h4>Administration</h4>
+<label class="radio-inline">
+  <input required autofocus type="radio" name="inlineRadioOption" id="inlineRadio3" value="BDE"> BDE
+</label>
+
+<label class="radio-inline">
+  <input required autofocus type="radio" name="inlineRadioOption" id="inlineRadio3" value="Admin"> Student
+</label>
+<hr>
+ <div class="form-group">
+ 	<h4>Avatar</h4>
+    <label for="exampleInputFile"></label>
+    <input type="file" id="exampleInputFile">
+    <p class="help-block">500 ko maximum</p>
+  </div>
+ <hr>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" href="HomePage.html.twig">Sign in</button>
+      </form>
+
+    </div> <!-- /container -->
+
+
+    <footer>
+        <p><center>&copy;  2017 CaKeChi corporation.</center></p>
+        <p><center>Copyrighted.</center></p>
+      </footer>
+</body>
+</html>
