@@ -341,5 +341,9 @@ class Event
     {
         return $this->categoryID;
     }
-}
 
+    public function __construct()
+    {
+        $this->creationDate = new \Datetime();
+    }
+}
