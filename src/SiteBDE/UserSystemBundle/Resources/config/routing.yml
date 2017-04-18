@@ -1,3 +1,9 @@
 site_bde_user_system_inscription:
     path:     /Register
     defaults: { _controller: SiteBDEUserSystemBundle:Inscription:index }
+
+site_bde_user_system_connexion:
+    path:     /Login
+    defaults: { _controller: SiteBDEUserSystemBundle:Connexion:index }
+
+
