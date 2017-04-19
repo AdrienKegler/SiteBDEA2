@@ -11,5 +11,16 @@ class ConnexionController extends Controller
         return $this->render('SiteBDEUserSystemBundle:Connexion:Login.html.twig');
     }
 
+    public function Identification()
+    {
+    	if (isset($_POST['inputPseudo']) and $_POST['inputPseudo'] == ) {
+    		# code...
+    	}
+
+
+    	$_POST['inputPseudo'];
+    	$_POST['inputPassword'];
+    }
+
     
 }
