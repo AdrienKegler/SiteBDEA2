@@ -13,7 +13,7 @@ class ConnexionController extends Controller
 
     public function Identification()
     {
-    	if (isset($_POST['inputPseudo']) and $_POST['inputPseudo'] == ) {
+    	if (isset($_POST['inputPseudo']) ) {
     		# code...
     	}
 
