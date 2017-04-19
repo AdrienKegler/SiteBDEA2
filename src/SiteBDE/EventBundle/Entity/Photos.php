@@ -18,6 +18,108 @@ class Photos
 
     private $tempFilename;
 
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Photo", type="string", length=255)
+     */
+
+      private $url;
+
+  /**
+   * @ORM\Column(name="alt", type="string", length=255)
+   */
+    private $alt;
+
+    private $file;
+
+    private $photo;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="EventID", type="integer")
+     */
+    private $eventID;
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    public function getFile()
+    {
+        return $this->file;
+    }
+
+    public function setFile(UploadedFile $file = null)
+  {
+    $this->file = $file;
+  }
+    
+    /**
+     * Set photo
+     *
+     * @param string $photo
+     *
+     * @return Photos
+     */
+    public function setPhoto($photo)
+    {
+        $this->photo = $photo;
+
+        return $this;
+    }
+
+    /**
+     * Get photo
+     *
+     * @return string
+     */
+    public function getPhoto()
+    {
+        return $this->photo;
+    }
+
+    /**
+     * Set eventID
+     *
+     * @param integer $eventID
+     *
+     * @return Photos
+     */
+    public function setEventID($eventID)
+    {
+        $this->eventID = $eventID;
+
+        return $this;
+    }
+
+    /**
+     * Get eventID
+     *
+     * @return int
+     */
+    public function getEventID()
+    {
+        return $this->eventID;
+    }
+
     public function setFile(UploadedFile $file)
     {
         $this->file = $file;
@@ -77,116 +179,5 @@ class Photos
     // On sauvegarde temporairement le nom du fichier, car il dépend de l'id
     $this->tempFilename = $this->getUploadRootDir().'/'.$this->id.'.'.$this->url;
   }
-
-  /**
-   * @ORM\PostRemove()
-   */
-  public function removeUpload()
-  {
-    // En PostRemove, on n'a pas accès à l'id, on utilise notre nom sauvegardé
-    if (file_exists($this->tempFilename)) {
-      // On supprime le fichier
-      unlink($this->tempFilename);
-    }
-  }
-
-  public function getUploadDir()
-  {
-    // On retourne le chemin relatif vers l'image pour un navigateur
-    return 'uploads/img';
-  }
-
-  protected function getUploadRootDir()
-  {
-    // On retourne le chemin relatif vers l'image pour notre code PHP
-    return __DIR__.'/../../../../web/'.$this->getUploadDir();
-  }
-   public function getWebPath()
-  {
-    return $this->getUploadDir().'/'.$this->getId().'.'.$this->getUrl();
-  }
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="id", type="integer")
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="AUTO")
-     */
-    private $id;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="Photo", type="string", length=255)
-     */
-    private $photo;
-
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="EventID", type="integer")
-     */
-    private $eventID;
-
-
-    /**
-     * Get id
-     *
-     * @return int
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    /**
-     * Set photo
-     *
-     * @param string $photo
-     *
-     * @return Photos
-     */
-    public function setPhoto($photo)
-    {
-        $this->photo = $photo;
-
-        return $this;
-    }
-
-    /**
-     * Get photo
-     *
-     * @return string
-     */
-    public function getPhoto()
-    {
-        return $this->photo;
-    }
-
-    /**
-     * Set eventID
-     *
-     * @param integer $eventID
-     *
-     * @return Photos
-     */
-    public function setEventID($eventID)
-    {
-        $this->eventID = $eventID;
-
-        return $this;
-    }
-
-    /**
-     * Get eventID
-     *
-     * @return int
-     */
-    public function getEventID()
-    {
-        return $this->eventID;
-    }
-
-    
 }
 
