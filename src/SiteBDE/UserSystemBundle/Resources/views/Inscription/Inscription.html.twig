@@ -3,8 +3,10 @@
 <head>
     <meta charset="utf-8">
    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+   <link rel="stylesheet" type="text/css" href="{{ asset('css/HomePage.css')}}">
    
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome-4.7.0/css/font-awesome.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome-4.7.0/css/font-awesome.css')}}">
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   
@@ -41,13 +43,7 @@
                             <a href="#page-top"></a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#truc"><i class="fa fa-info-circle" aria-hidden="true"></i> Information</a>
-                        </li>
-                        <li>
-                            <a class="page-scroll" href="#portfolio"><i class="fa fa-newspaper-o" aria-hidden="true"></i> News</a>
-                        </li>
-                        <li>
-                            <a class="page-scroll" href="#team"><i class="fa fa-users" aria-hidden="true"></i> BDE</a>
+                            <a class="page-scroll" href="http://localhost/SiteBDEA2/web/app_dev.php"><i class="fa fa-sign-in" aria-hidden="true"></i></i> Leave</a>
                         </li>
                         
                     </ul>
@@ -66,7 +62,8 @@
         </nav>
     </header>
 
-        <hr>
+<section>
+
     <div class="container">
 
       <form class="form-signin">
@@ -143,11 +140,34 @@
       </form>
 
     </div> <!-- /container -->
+</section>
 
-
-    <footer>
-        <p><center>&copy;  2017 CaKeChi corporation.</center></p>
-        <p><center>Copyrighted.</center></p>
-      </footer>
+<footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <span class="copyright">Copyright &copy; Website 2017</span>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+                        <li><a href="#"><i class="fa fa-github"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline quicklinks">
+                        <li><a href="#">Privacy Policy</a>
+                        </li>
+                        <li><a href="#">Terms of Use</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

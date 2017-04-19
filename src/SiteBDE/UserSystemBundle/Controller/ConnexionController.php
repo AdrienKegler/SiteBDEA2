@@ -8,7 +8,8 @@ class ConnexionController extends Controller
 {
     public function indexAction()
     {
-        return $this
-        		->render('SiteBDEUserSystemBundle:Connexion:Login.html.twig');
+        return $this->render('SiteBDEUserSystemBundle:Connexion:Login.html.twig');
     }
+
+    
 }
