@@ -1,6 +1,11 @@
 site_bde_user_system_inscription:
     path:     /Register
-    defaults: { _controller: SiteBDEUserSystemBundle:Inscription:index }
+    defaults: { _controller: SiteBDEUserSystemBundle:Inscription:AddUser }
+
+
+site_bde_user_system_inscription_verify:
+    path:     /RegisterVerify
+    defaults: { _controller: SiteBDEUserSystemBundle:InscriptionHidden:VerifyNSave }
 
 site_bde_user_system_connexion:
     path:     /Login

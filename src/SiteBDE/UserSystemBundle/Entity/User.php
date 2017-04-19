@@ -43,7 +43,7 @@ class User
     private $sex;
 
     /**
-     * @var \DateTime
+     * @var string
      *
      * @ORM\Column(name="BirthDate", type="date")
      */
@@ -73,7 +73,7 @@ class User
     /**
      * @var string
      *
-     * @ORM\Column(name="Avatar", type="blob")
+     * @ORM\Column(name="Avatar", type="string")
      */
     private $avatar;
 
@@ -183,7 +183,7 @@ class User
      */
     public function setBirthDate($birthDate)
     {
-        $this->birthDate = $birthDate;
+        $this->birthDate  = new \DateTime($birthDate);
 
         return $this;
     }

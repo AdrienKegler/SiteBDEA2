@@ -7,12 +7,10 @@ use SiteBDE\UserSystemBundle\Entity\User;
 
 class InscriptionController extends Controller
 {
-    public function indexAction()
+    public function AddUserAction()
     {
-    	if ("$_SERVER['REQUEST_METHOD']"[]) {
-    	}
 
+    	return $this->render('SiteBDEUserSystemBundle:Inscription:InscriptionForm.html.twig', array());
 
-    return $this->render('SiteBDEUserSystemBundle:Inscription:Inscription.html.twig', array());
     }
 }
