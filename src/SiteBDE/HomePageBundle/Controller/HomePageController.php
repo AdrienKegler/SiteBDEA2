@@ -10,8 +10,13 @@ class HomePageController extends Controller
 
 	public function LoginAction()
 	{	
-		$_SESSION['user']= NULL;
-		return $this->render('SiteBDEHomePageBundle:HomePage:HomePage.html.twig', array("Status" => $_SESSION["Status"], "user" => $_SESSION["user"]));
+		if (isset($_SESSION["Status"]) && isset($_SESSION["user"])) {
+			return $this->render('SiteBDEHomePageBundle:HomePage:HomePage.html.twig', array("Status" => $_SESSION["Status"], "user" => $_SESSION["user"]));
+		}
+		else {
+			return $this->render('SiteBDEHomePageBundle:HomePage:HomePage.html.twig');
+		}
+		
 	}
 
 	public function SignOutAction()
