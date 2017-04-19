@@ -54,11 +54,48 @@
                             <a class="page-scroll" href="#team"><i class="fa fa-users" aria-hidden="true"></i> BDE</a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Shop</a>
+                            <a class="page-scroll" href="http://localhost/SiteBDEA2/web/app_dev.php/Shop/Home"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Shop</a>
                         </li>
-                        <li>
-                            <a class="page-scroll" href="#"><i class="fa fa-user-circle-o" aria-hidden="true"></i> Login</a>
-                        </li>
+                        
+                            {% if user is defined and user != NULL %}
+                            <li>
+                                <a class="page-scroll" href="http://localhost/SiteBDEA2/web/app_dev.php/User/Register">
+                                    <i class="fa fa-user-circle-o" aria-hidden="true">
+                                    </i> {{user}}
+                                </a>
+                            </li>
+                            {% if Status is defined and Status == "Admin" %}
+                            <li>
+                                <a class="page-scroll" href="#">
+                                    <i class="fa fa-unlock-alt" aria-hidden="true">
+                                    </i> Admin Options
+                                </a>
+                            </li>
+                            {% elseif Status is defined and Status == "BDE" %}
+                            <li>
+                                <a class="page-scroll" href="#">
+                                    <i class="fa fa-cog" aria-hidden="true">
+                                    </i> BDE Options
+                                </a>
+                            </li> 
+                            {% else %}
+                            {% endif %}}
+                            <li> 
+                                <a href="http://localhost/SiteBDEA2/web/app_dev.php">
+                                            <i class="fa fa-sign-out" aria-hidden="true">
+                                            </i> Sign Out
+                                </a>   
+                            </li>
+                            {% else %}
+                            <li>
+                                <a class="page-scroll" href="http://localhost/SiteBDEA2/web/app_dev.php/User/Login">
+                                    <i class="fa fa-user-circle-o" aria-hidden="true">
+                                    </i> Login
+                                </a>
+                            </li>
+                            {% endif %}
+                        
+
                         
                     </ul>
                     <!--

@@ -1,3 +1,4 @@
-site_bde_home_page_homepage:
+site_bde_home_page_homepage_SignedOut:
     path:     /
-    defaults: { _controller: SiteBDEHomePageBundle:HomePage:index }
+    defaults: { _controller: SiteBDEHomePageBundle:HomePage:Login }
+

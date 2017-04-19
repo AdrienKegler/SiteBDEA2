@@ -4,8 +4,10 @@
     <meta charset="utf-8">
 
  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="{{ asset('css/HomePage.css')}}">
    
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome-4.7.0/css/font-awesome.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome-4.7.0/css/font-awesome.css')}}">
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   
@@ -24,7 +26,7 @@
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expended="true">
                         <span class="sr-only">Toggle navigation</span> Menu
                     </button>
-                    <a class="navbar-brand page-scroll" href="#page-top">BDE CESI Lyon</a>
+                    <a class="navbar-brand page-scroll" href="http://localhost/SiteBDEA2/web/app_dev.php">BDE CESI Lyon</a>
                     <div class="navbar-header">
                         <!--<a class="navbar-brand page-scroll" href="#page-top">
                         <img alt="Brand" src="{{ asset('img/logoBDENavBar.png') }}">
@@ -38,25 +40,8 @@
                         <li class="hidden">
                             <a href="#page-top"></a>
                         </li>
-                        <li>
-                            <a class="page-scroll" href="#truc"><i class="fa fa-info-circle" aria-hidden="true"></i> Information</a>
-                        </li>
-                        <li>
-                            <a class="page-scroll" href="#portfolio"><i class="fa fa-newspaper-o" aria-hidden="true"></i> News</a>
-                        </li>
-                        <li>
-                            <a class="page-scroll" href="#team"><i class="fa fa-users" aria-hidden="true"></i> BDE</a>
-                        </li>
-                        
                     </ul>
-                    <!--
-                    <form class="navbar-form navbar-right inline-form">
-                  <div class="form-group">
-                       <input type="search" class="input-sm form-control" placeholder="Search">
-                       <button type="submit" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-eye-open"></span> Search</button>
-                  </div>
-                  </form>
-                  -->
+
                 </div>
                 <!-- /.navbar-collapse -->
             </div>
@@ -64,6 +49,7 @@
         </nav>
     </header>
 
+<section>
         <hr>
     <div class="container">
 
@@ -78,17 +64,40 @@
 <hr>  
         <em>Haven't an account ? Let's sign in ! </em>
         <br>
-        <button type="button" class="btn btn-default">Sign in</button>
+        <button type="button" class="btn btn-default" href="#">Sign in</button>
 <hr>
-        <button class="btn btn-lg btn-primary btn-block" type="submit" href="HomePage.html.twig">Login</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" href="#">Login</button>
       </form>
 
     </div> <!-- /container -->
+</section>
 
-
-    <footer>
-        <p><center>&copy; 2017 CaKeChi corporation.</center></p>
-        <p><center>Copyrighted.</center></p>
-      </footer>
+<footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <span class="copyright">Copyright &copy; Website 2017</span>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+                        <li><a href="#"><i class="fa fa-github"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline quicklinks">
+                        <li><a href="#">Privacy Policy</a>
+                        </li>
+                        <li><a href="#">Terms of Use</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
