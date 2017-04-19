@@ -46,7 +46,12 @@
                         <li>
                             <a class="page-scroll" href="#team"><i class="fa fa-users" aria-hidden="true"></i> BDE</a>
                         </li>
-                        
+                        <li>
+                            <a class="page-scroll" href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Shop</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#"><i class="fa fa-user-circle-o" aria-hidden="true"></i> Login</a>
+                        </li>
                     </ul>
                     <!--
                     <form class="navbar-form navbar-right inline-form">
@@ -83,7 +88,7 @@
                 <hr>
 
                 <!-- Preview Image -->
-                <img class="img-responsive" src="Oregairu.png" alt="">
+                <img src="{{ asset('img/img/yahari1.png') }}"/>
 
                 <br>
 
@@ -95,7 +100,12 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!</p>
 
                 <hr>
-
+                <button type="button" 
+       			 id="testBtn" 
+       			 class="btn btn-success glyphicon glyphicon-thumbs-up" 
+      			 data-loading-text=" ... ">
+  				 0</button>
+				
                  <div class="well">
                     <h4>Leave a Comment:</h4>
                     <form role="form">
@@ -126,11 +136,15 @@
     <!-- /.container -->
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
+    
+    <script src="{{ asset('js/Event.js') }}"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 
 </html>

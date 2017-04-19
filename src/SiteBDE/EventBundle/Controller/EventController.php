@@ -11,4 +11,5 @@ class EventController extends Controller
         return $this
         		->render('SiteBDEEventBundle:Event:Event.html.twig');
     }
+    
 }
