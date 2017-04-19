@@ -2,7 +2,7 @@
 
 namespace SiteBDE\UserSystemBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use UserSystemBundle\Entity\User;
+use SiteBDE\UserSystemBundle\Entity\User;
 use Symfony\Component\HttpFoundation\Response;
 
 class ConnexionHiddenController extends Controller
@@ -13,24 +13,24 @@ class ConnexionHiddenController extends Controller
 		$repository = $this
 			->getDoctrine()
 			->getManager()
-			->getRepository('UserSystemBundle:User');
+			->getRepository('SiteBDEUserSystemBundle:User');
 
-		$listUsers = $repository->findByPseudo($_POST('inputPassword'));
+		$listUsers = $repository->findByPseudo($_POST['inputPassword']);
 		foreach ($listUsers as $key => $value) {
-			if (password_verify ( $_POST('inputPassword') , $value->getPassWord()) === TRUE ) {
+			if (password_verify ( $_POST['inputPassword'] , $value->getPassWord()) === TRUE ) {
 				$User = $value;
 			 	break;
 			 } 
 		}
 
 		if ($User !== NULL) {
-			$_SESSION['User'] = $User->getName();
+			$_SESSION['user'] = $User->getFirstName();
 			$_SESSION['Status'] = $User->getStatusID();
-			return $this->render('SiteBDEHomePageBundle:HomePage:HomePage.html.twig', array('user' => $_SESSION['User'], 'Status' => $_SESSION['Status']));
+			return $this->redirectToRoute('site_bde_home_page_homepage_SignedOut');
 		}
 		else
 		{
-			return $this->render('SiteBDEUserSystemBundle:Connexion:Debug.html.twig', array('users' => $listUsers));
+			return $this->redirectToRoute('site_bde_user_system_connexion');
 		}
 	}
 }
