@@ -6,5 +6,7 @@ site_bde_event_Form:
     path:     /FormEvent
     defaults: { _controller: SiteBDEEventBundle:FormEvent:index }
 
-
+site_bde_event_Gallery:
+    path:     /Gallery
+    defaults: { _controller: SiteBDEEventBundle:Gallery:index }
  
