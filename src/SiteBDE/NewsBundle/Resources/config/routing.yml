@@ -1,3 +1,7 @@
 site_bde_news_homepage:
     path:     /News
     defaults: { _controller: SiteBDENewsBundle:News:index }
+
+site_bde_news_gallery:
+    path:     /Gallery
+    defaults: { _controller: SiteBDENewsBundle:Gallery:index }
