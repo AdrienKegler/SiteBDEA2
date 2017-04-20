@@ -12,3 +12,6 @@ site_bde_user_system_connexion:
     defaults: { _controller: SiteBDEUserSystemBundle:Connexion:index }
 
 
+site_bde_user_system_connexion_verify:
+    path:     /LoginVerify
+    defaults: { _controller: SiteBDEUserSystemBundle:ConnexionHidden:VerifyNConnect }

@@ -2,3 +2,6 @@ site_bde_home_page_homepage_SignedOut:
     path:     /
     defaults: { _controller: SiteBDEHomePageBundle:HomePage:Login }
 
+site_bde_home_page_homepage_SigningOut:
+    path:     /SigningOut
+    defaults: { _controller: SiteBDEHomePageBundle:HomePage:SignOut }

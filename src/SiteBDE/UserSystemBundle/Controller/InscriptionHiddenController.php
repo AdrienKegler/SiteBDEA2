@@ -9,9 +9,6 @@ class InscriptionHiddenController extends Controller
 {
     public function VerifyNSaveAction()
     {	
-    	$a=NULL;
-
-
     	if ($_POST['inputPassword'] == $_POST['confirmation']) {
     		
 
@@ -21,7 +18,7 @@ class InscriptionHiddenController extends Controller
 			$User->setPseudo($_POST["inputPseudo"]);
 			$User->setMailAddress($_POST["inputEmail"]);
 			$User->setBirthDate($_POST["inputBirthDate"]);
-			$User->setPassWord($_POST["inputPassword"]);
+			$User->setPassWord(password_hash($_POST["inputPassword"], PASSWORD_DEFAULT));
 			$User->setSex($_POST["inlineRadioSexe"]);
 			$User->setSchoolID($_POST["inlineRadioSchool"]);
 			$User->setStatusID($_POST["inlineRadioOption"]);
@@ -34,7 +31,9 @@ class InscriptionHiddenController extends Controller
 			$em->flush();
 			return $this->redirect('http://localhost/SiteBDEA2/web/app_dev.php');
     	}
-
-
+    	else
+    	{
+    		return $this->redirectToRoute("site_bde_user_system_inscription");
+    	}
 	}
 }

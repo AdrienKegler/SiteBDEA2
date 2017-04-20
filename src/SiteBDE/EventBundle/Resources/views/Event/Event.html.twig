@@ -5,6 +5,8 @@
  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
    
     <link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome-4.7.0/css/font-awesome.css')}}">
+
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/HomePage.css')}}">
   
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   
@@ -12,12 +14,19 @@
   
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+  <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+  
+  <script>tinymce.init({ selector:'textarea' });</script>
+  <script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=your_API_key"></script>
+
 
     <title>Event</title>
 </head>
+
+
 <body>
-        <header>
-         <nav id="mainNav" class="navbar navbar-inverse navbar-custom navbar-fixed-top">
+        
+         <nav id="mainNav" class="navbar navbar-inverse navbar-custom navbar-fixed-top affix">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header page-scroll">
@@ -39,37 +48,70 @@
                             <a href="#page-top"></a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#truc"><i class="fa fa-info-circle" aria-hidden="true"></i> Information</a>
+                            <a class="page-scroll" href="http://localhost/SiteBDEA2/web/app_dev.php/Shop/Home"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Shop</a>
                         </li>
-                        <li>
-                            <a class="page-scroll" href="#portfolio"><i class="fa fa-newspaper-o" aria-hidden="true"></i> News</a>
-                        </li>
-                        <li>
-                            <a class="page-scroll" href="#team"><i class="fa fa-users" aria-hidden="true"></i> BDE</a>
-                        </li>
-                        <li>
-                            <a class="page-scroll" href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Shop</a>
-                        </li>
-                        <li>
-                            <a class="page-scroll" href="#"><i class="fa fa-user-circle-o" aria-hidden="true"></i> Login</a>
-                        </li>
+                        
+                            {% if user is defined and user != NULL %}
+                            <li>
+                                <a class="page-scroll" href="http://localhost/SiteBDEA2/web/app_dev.php/User/Register">
+                                    <i class="fa fa-user-circle-o" aria-hidden="true">
+                                    </i> {{user}}
+                                </a>
+                            </li>
+                            {% if Status is defined and Status == "Admin" %}
+                            <li>
+                                <a class="page-scroll" href="#">
+                                    <i class="fa fa-unlock-alt" aria-hidden="true">
+                                    </i> Admin Options
+                                </a>
+                            </li>
+                            {% elseif Status is defined and Status == "BDE" %}
+                            <li>
+                                <a class="page-scroll" href="#">
+                                    <i class="fa fa-cog" aria-hidden="true">
+                                    </i> BDE Options
+                                </a>
+                            </li> 
+                            {% else %}
+                            {% endif %}}
+                            <li> 
+                                <a href="http://localhost/SiteBDEA2/web/app_dev.php">
+                                            <i class="fa fa-sign-out" aria-hidden="true">
+                                            </i> Sign Out
+                                </a>   
+                            </li>
+                            {% else %}
+                            <li>
+                                <a class="page-scroll" href="http://localhost/SiteBDEA2/web/app_dev.php/User/Login">
+                                    <i class="fa fa-user-circle-o" aria-hidden="true">
+                                    </i> Login
+                                </a>
+                            </li>
+                            {% endif %}
+                        
+
                         
                     </ul>
                     <!--
                     <form class="navbar-form navbar-right inline-form">
-                  <div class="form-group">
-                       <input type="search" class="input-sm form-control" placeholder="Search">
-                       <button type="submit" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-eye-open"></span> Search</button>
-                  </div>
-                  </form>
-                  -->
+                      <div class="form-group">
+                           <input type="search" class="input-sm form-control" placeholder="Search">
+                           <button type="submit" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-eye-open"></span> Search</button>
+                      </div>
+                    </form>
+                    -->
                 </div>
                 <!-- /.navbar-collapse -->
             </div>
             <!-- /.container-fluid -->
         </nav>
+
+
+    <header>
     </header>
-<br>
+
+
+<section>
     <!-- Page Content -->
     <div class="container">
 
@@ -103,22 +145,32 @@
 
                 <!-- Contextual button for informational alert messages -->
                 
-                <button type="button" class="btn btn-info"><span class="glyphicon glyphicon-star"></span> Wanna join ? </button> <button type="button" 
-        id="testBtn" 
-        class="btn btn-success glyphicon glyphicon-thumbs-up" 
-        data-loading-text=" ... ">
-    0</button>
+
+                {% if user is defined %}
+                <a href="http://localhost/SiteBDEA2/web/app_dev.php/Event/FormEvent"><button type="button" class="btn btn-info"><i class="fa fa-star" aria-hidden="true"></i> Wanna join ? </button></a> 
+                <button type="button" 
+                id="testBtn" class="btn btn-success glyphicon glyphicon-thumbs-up" data-loading-text=" ... "> 0</button>
+                {% else %}
+                    <button type="button" class="btn btn-info"><i class="fa fa-info-circle" aria-hidden="true"></i> If you Wanna join us, please log in !</button>
+                {% endif %}
 
                 <hr>
 
                  <div class="well">
+                    {% if user is defined %}
                     <h4>Leave a Comment:</h4>
+                    {% else %}
+                    <h4>Please log in to leave a comment.</h4>
+                    {% endif %}
+                    {% if user is defined %}
                     <form role="form">
                         <div class="form-group">
                             <textarea class="form-control" rows="3"></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span> Submit </button>
                     </form>
+                    {% endif %}
+                    
                 </div>
 
                 <div class="media">
@@ -127,30 +179,51 @@
                     </a>
                     <div class="media-body">
                         <h4 class="media-heading">Tonio_
-                            <small>April 18, 2017 at 11:57 PM</small>
+                            <small>April 18, 2017 at 11:57 : </small>
+                            {% if Status is defined and Status == "Admin" %}
+                            <a class="btn btn-primary btn-sm page-scroll" href="#truc" role="button"><i class="fa fa-trash" aria-hidden="true"></i> Remove</i></a>
+                            {% endif %}
                         </h4>
                         Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-        <!-- Footer -->
-          
-           <footer>
-           <hr>
-        <p><center>&copy; 2017 CaKeChi corporation.</center></p>
-        <p><center>Copyrighted.</center></p>
-      </footer>
-    </div>
-    <!-- /.container -->
-
-    <!-- jQuery -->
-    
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <!-- Bootstrap Core JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    
-    <script src="{{ asset('js/Event.js') }}"></script>
-     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+                    </div>
+                </div>    
+</section> 
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <span class="copyright">Copyright &copy; Website 2017</span>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+                        <li><a href="#"><i class="fa fa-github"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline quicklinks">
+                        <li><a href="#">Privacy Policy</a>
+                        </li>
+                        <li><a href="#">Terms of Use</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer> 
 
 </body>
+    
+    <script src="{{ asset('js/Event.js') }}"></script>
+
+<!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" integrity="sha384-mE6eXfrb8jxl0rzJDBRanYqgBxtJ6Unn4/1F7q4xRRyIw7Vdg9jP4ycT7x1iVsgb" crossorigin="anonymous"></script>
+    <!--NavBar-->
+    <!--<script src="{{ asset('js/HomePage.min.js') }}"></script>-->
 
 </html>
