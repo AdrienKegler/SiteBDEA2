@@ -12,6 +12,7 @@
   
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+  <script type="text/php" href="{{ asset('php/Gallery.php')}}"></script>
 
     <title>Gallery</title>
 </head>
@@ -81,11 +82,17 @@
                 <br>
                 <!-- Title -->
                 <h1>Gallery</h1>
-                <p>Upload or download your pictures </p>
+                <p>Upload your pictures </p>
 
-                <div class="well">
-                    {{ form(form) }}
+                <div>
+                    <form enctype="multipart/form-data" action="Gallery" method="post">
+    
+                    <input type="hidden" name="MAX_FILE_SIZE" value="1024" />
+                    Send the file : <input name"userfile" type="file" />
+                    <input type="Submit" value:"Send the file" />
+                </form>
                 </div>
+                
         <!-- Footer -->
           
            <footer>

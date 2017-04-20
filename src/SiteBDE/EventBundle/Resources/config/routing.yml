@@ -8,8 +8,7 @@ site_bde_event_Form:
 
 site_bde_event_Gallery:
     path:     /Gallery
-    defaults: { _controller: SiteBDEEventBundle:Gallery:add }
- 
-site_bde_event_List:
+    defaults: { _controller: SiteBDEEventBundle:Gallery:index }
+ site_bde_event_List:
     path:     /List
     defaults: { _controller: SiteBDEEventBundle:EventList:EventList }
