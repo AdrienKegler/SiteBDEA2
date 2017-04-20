@@ -9,3 +9,8 @@ site_bde_event_Form:
 site_bde_event_List:
     path:     /List
     defaults: { _controller: SiteBDEEventBundle:EventList:EventList }
+
+
+site_bde_create_event_Form:
+    path:     /CreateFormEvent
+    defaults: { _controller: SiteBDEEventBundle:EventParticipation:addForm }

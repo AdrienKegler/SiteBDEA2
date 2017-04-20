@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"    crossorigin="anonymous">
+
+        <link rel="stylesheet" href="{{ asset('css/HomePage.css') }}" />
+        <!--jQuery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+     <link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome-4.7.0/css/font-awesome.css')}}">
+     <meta name="viewport" content="width=device-width, initial=scale=1.0, shrink-to-fit=no">
+     <title>BDE CESI Lyon</title>
+
+</head>
+
+<body>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Title">Titre</label>
+  <div class="col-md-4">
+  <input id="Title" name="Title" type="text" placeholder="Title" class="form-control input-md" required="">
+
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Catégorie</label>
+  <div class="col-md-4">
+  <input id="textinput" name="textinput" type="text" placeholder="catégorie" class="form-control input-md">
+
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Date</label>
+  <div class="col-md-4">
+  <input id="textinput" name="textinput" type="text" placeholder="jj/mm/aaaa" class="form-control input-md">
+
+  </div>
+</div>
+
+<!-- Textarea -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textarea">Description</label>
+  <div class="col-md-4">
+    <textarea class="form-control" id="textarea" name="textarea" placeholder="description"></textarea>
+  </div>
+</div>
+<!-- Multiple Checkboxes -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="checkboxes">Jours  :</label>
+  <div class="col-md-4">
+  <div class="checkbox">
+    <label for="checkboxes-0">
+      <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+      Lundi
+    </label>
+  </div>
+  <div class="checkbox">
+    <label for="checkboxes-1">
+      <input type="checkbox" name="checkboxes" id="checkboxes-1" value="2">
+      Mardi
+    </label>
+  </div>
+  <div class="checkbox">
+    <label for="checkboxes-2">
+      <input type="checkbox" name="checkboxes" id="checkboxes-2" value="3">
+      Mercredi
+    </label>
+  </div>
+  <div class="checkbox">
+    <label for="checkboxes-3">
+      <input type="checkbox" name="checkboxes" id="checkboxes-3" value="4">
+      Jeudi
+    </label>
+  </div>
+  <div class="checkbox">
+    <label for="checkboxes-4">
+      <input type="checkbox" name="checkboxes" id="checkboxes-4" value="5">
+      Vendredi
+    </label>
+  </div>
+  <div class="checkbox">
+    <label for="checkboxes-5">
+      <input type="checkbox" name="checkboxes" id="checkboxes-5" value="6">
+      Samedi
+    </label>
+  </div>
+  <div class="checkbox">
+    <label for="checkboxes-6">
+      <input type="checkbox" name="checkboxes" id="checkboxes-6" value="7">
+      Dimanche
+    </label>
+  </div>
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="singlebutton"></label>
+  <div class="col-md-4">
+    <button id="singlebutton" name="singlebutton" class="btn btn-primary">Submit</button>
+  </div>
+</div>
+
+</body>
+</html>
