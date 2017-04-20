@@ -23,9 +23,15 @@ class ConnexionHiddenController extends Controller
 			 } 
 		}
 
+
+
+
+
 		if ($User !== NULL) {
-			$_SESSION['user'] = $User->getFirstName();
-			$_SESSION['Status'] = $User->getStatusID();
+			$_SESSION["user"] = $User->getFirstName();
+			$_SESSION["Status"] = $User->getStatusID();
+			var_dump($_SESSION["user"]);
+			var_dump($_SESSION["Status"]);
 			return $this->redirectToRoute('site_bde_home_page_homepage_SignedOut');
 		}
 		else
@@ -33,4 +39,5 @@ class ConnexionHiddenController extends Controller
 			return $this->redirectToRoute('site_bde_user_system_connexion');
 		}
 	}
+
 }
