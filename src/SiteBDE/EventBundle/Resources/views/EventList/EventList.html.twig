@@ -49,14 +49,14 @@
                                     </i> {{user}}
                                 </a>
                             </li>
-                            {% if Status is defined and Status == "Admin" %}
+                            {% if Status is defined and Status == 1 %}
                             <li>
                                 <a class="page-scroll" href="#">
                                     <i class="fa fa-unlock-alt" aria-hidden="true">
                                     </i> Admin Options
                                 </a>
                             </li>
-                            {% elseif Status is defined and Status == "BDE" %}
+                            {% elseif Status is defined and Status == 2 %}
                             <li>
                                 <a class="page-scroll" href="#">
                                     <i class="fa fa-cog" aria-hidden="true">
@@ -66,7 +66,7 @@
                             {% else %}
                             {% endif %}}
                             <li> 
-                                <a href="http://localhost/SiteBDEA2/web/app_dev.php">
+                                <a href="http://localhost/SiteBDEA2/web/app_dev.php/SigningOut">
                                             <i class="fa fa-sign-out" aria-hidden="true">
                                             </i> Sign Out
                                 </a>   
@@ -317,6 +317,17 @@
                                     <li>In: A really Great Place</li>
                                 </ul>
                                 <p><a class="btn btn-primary btn-lg page-scroll" href="#" role="button">Show More</a></p>
+
+                                {% if Status is defined and Status != NULL %}
+                                    {% if Status == 2 %}
+                                    <p><a class="btn btn-primary btn-sm page-scroll" href="#" role="button"><i class="fa fa-pencil" aria-hidden="true"></i> Modify</a></p>
+                                    {% endif %}
+                                    {% if Status == 1 %}
+                                        <p><a class="btn btn-primary btn-sm page-scroll" href="#" role="button"><i class="fa fa-pencil" aria-hidden="true"></i> Modify</a></p>
+                                        <p><a class="btn btn-primary btn-sm page-scroll" href="#" role="button"><i class="fa fa-trash" aria-hidden="true"></i> Remove Event</a></p>
+                                    {% endif %}
+                                {% else %}
+                                {% endif %}
                             </div>
                         </div>
                     </div>
@@ -353,6 +364,17 @@
                                     <li>In: A really Great Place</li>
                                 </ul>
                                 <p><a class="btn btn-primary btn-lg page-scroll" href="#" role="button">Show More</a></p>
+
+                                {% if Status is defined and Status != NULL %}
+                                    {% if Status == 2 %}
+                                    <p><a class="btn btn-primary btn-sm page-scroll" href="#" role="button"><i class="fa fa-pencil" aria-hidden="true"></i> Modify</a></p>
+                                    {% endif %}
+                                    {% if Status == 1 %}
+                                        <p><a class="btn btn-primary btn-sm page-scroll" href="#" role="button"><i class="fa fa-pencil" aria-hidden="true"></i> Modify</a></p>
+                                        <p><a class="btn btn-primary btn-sm page-scroll" href="#" role="button"><i class="fa fa-trash" aria-hidden="true"></i> Remove Event</a></p>
+                                    {% endif %}
+                                {% else %}
+                                {% endif %}
                             </div>
                         </div>
                     </div>
@@ -389,6 +411,17 @@
                                     <li>In: A really Great Place</li>
                                 </ul>
                                 <p><a class="btn btn-primary btn-lg page-scroll" href="#" role="button">Show More</a></p>
+
+                                {% if Status is defined and Status != NULL %}
+                                    {% if Status == 2 %}
+                                    <p><a class="btn btn-primary btn-sm page-scroll" href="#" role="button"><i class="fa fa-pencil" aria-hidden="true"></i> Modify</a></p>
+                                    {% endif %}
+                                    {% if Status == 1 %}
+                                        <p><a class="btn btn-primary btn-sm page-scroll" href="#" role="button"><i class="fa fa-pencil" aria-hidden="true"></i> Modify</a></p>
+                                        <p><a class="btn btn-primary btn-sm page-scroll" href="#" role="button"><i class="fa fa-trash" aria-hidden="true"></i> Remove Event</a></p>
+                                    {% endif %}
+                                {% else %}
+                                {% endif %}
                             </div>
                         </div>
                     </div>
@@ -425,6 +458,17 @@
                                     <li>In: A really Great Place</li>
                                 </ul>
                                 <p><a class="btn btn-primary btn-lg page-scroll" href="#" role="button">Show More</a></p>
+
+                                {% if Status is defined and Status != NULL %}
+                                    {% if Status == 2 %}
+                                    <p><a class="btn btn-primary btn-sm page-scroll" href="#" role="button"><i class="fa fa-pencil" aria-hidden="true"></i> Modify</a></p>
+                                    {% endif %}
+                                    {% if Status == 1 %}
+                                        <p><a class="btn btn-primary btn-sm page-scroll" href="#" role="button"><i class="fa fa-pencil" aria-hidden="true"></i> Modify</a></p>
+                                        <p><a class="btn btn-primary btn-sm page-scroll" href="#" role="button"><i class="fa fa-trash" aria-hidden="true"></i> Remove Event</a></p>
+                                    {% endif %}
+                                {% else %}
+                                {% endif %}
                             </div>
                         </div>
                     </div>
@@ -461,6 +505,17 @@
                                     <li>In: A really Great Place</li>
                                 </ul>
                                 <p><a class="btn btn-primary btn-lg page-scroll" href="#" role="button">Show More</a></p>
+
+                                {% if Status is defined and Status != NULL %}
+                                    {% if Status == 2 %}
+                                    <p><a class="btn btn-primary btn-sm page-scroll" href="#" role="button"><i class="fa fa-pencil" aria-hidden="true"></i> Modify</a></p>
+                                    {% endif %}
+                                    {% if Status == 1 %}
+                                        <p><a class="btn btn-primary btn-sm page-scroll" href="#" role="button"><i class="fa fa-pencil" aria-hidden="true"></i> Modify</a></p>
+                                        <p><a class="btn btn-primary btn-sm page-scroll" href="#" role="button"><i class="fa fa-trash" aria-hidden="true"></i> Remove Event</a></p>
+                                    {% endif %}
+                                {% else %}
+                                {% endif %}
                             </div>
                         </div>
                     </div>
@@ -497,6 +552,17 @@
                                     <li>In: A really Great Place</li>
                                 </ul>
                                 <p><a class="btn btn-primary btn-lg page-scroll" href="#" role="button">Show More</a></p>
+
+                                {% if Status is defined and Status != NULL %}
+                                    {% if Status == 2 %}
+                                    <p><a class="btn btn-primary btn-sm page-scroll" href="#" role="button"><i class="fa fa-pencil" aria-hidden="true"></i> Modify</a></p>
+                                    {% endif %}
+                                    {% if Status == 1 %}
+                                        <p><a class="btn btn-primary btn-sm page-scroll" href="#" role="button"><i class="fa fa-pencil" aria-hidden="true"></i> Modify</a></p>
+                                        <p><a class="btn btn-primary btn-sm page-scroll" href="#" role="button"><i class="fa fa-trash" aria-hidden="true"></i> Remove Event</a></p>
+                                    {% endif %}
+                                {% else %}
+                                {% endif %}
                             </div>
                         </div>
                     </div>
@@ -535,6 +601,17 @@
                                     <li>In: A really Great Place</li>
                                 </ul>
                                 <p><a class="btn btn-primary btn-lg page-scroll" href="#" role="button">Show More</a></p>
+
+                                {% if Status is defined and Status != NULL %}
+                                    {% if Status == 2 %}
+                                    <p><a class="btn btn-primary btn-sm page-scroll" href="#" role="button"><i class="fa fa-pencil" aria-hidden="true"></i> Modify</a></p>
+                                    {% endif %}
+                                    {% if Status == 1 %}
+                                        <p><a class="btn btn-primary btn-sm page-scroll" href="#" role="button"><i class="fa fa-pencil" aria-hidden="true"></i> Modify</a></p>
+                                        <p><a class="btn btn-primary btn-sm page-scroll" href="#" role="button"><i class="fa fa-trash" aria-hidden="true"></i> Remove Event</a></p>
+                                    {% endif %}
+                                {% else %}
+                                {% endif %}
                             </div>
                         </div>
                     </div>
@@ -571,6 +648,17 @@
                                     <li>In: A really Great Place</li>
                                 </ul>
                                 <p><a class="btn btn-primary btn-lg page-scroll" href="#" role="button">Show More</a></p>
+
+                                {% if Status is defined and Status != NULL %}
+                                    {% if Status == 2 %}
+                                    <p><a class="btn btn-primary btn-sm page-scroll" href="#" role="button"><i class="fa fa-pencil" aria-hidden="true"></i> Modify</a></p>
+                                    {% endif %}
+                                    {% if Status == 1 %}
+                                        <p><a class="btn btn-primary btn-sm page-scroll" href="#" role="button"><i class="fa fa-pencil" aria-hidden="true"></i> Modify</a></p>
+                                        <p><a class="btn btn-primary btn-sm page-scroll" href="#" role="button"><i class="fa fa-trash" aria-hidden="true"></i> Remove Event</a></p>
+                                    {% endif %}
+                                {% else %}
+                                {% endif %}
                             </div>
                         </div>
                     </div>
@@ -607,6 +695,17 @@
                                     <li>In: A really Great Place</li>
                                 </ul>
                                 <p><a class="btn btn-primary btn-lg page-scroll" href="#" role="button">Show More</a></p>
+
+                                {% if Status is defined and Status != NULL %}
+                                    {% if Status == 2 %}
+                                    <p><a class="btn btn-primary btn-sm page-scroll" href="#" role="button"><i class="fa fa-pencil" aria-hidden="true"></i> Modify</a></p>
+                                    {% endif %}
+                                    {% if Status == 1 %}
+                                        <p><a class="btn btn-primary btn-sm page-scroll" href="#" role="button"><i class="fa fa-pencil" aria-hidden="true"></i> Modify</a></p>
+                                        <p><a class="btn btn-primary btn-sm page-scroll" href="#" role="button"><i class="fa fa-trash" aria-hidden="true"></i> Remove Event</a></p>
+                                    {% endif %}
+                                {% else %}
+                                {% endif %}
                             </div>
                         </div>
                     </div>
@@ -643,6 +742,17 @@
                                     <li>In: A really Great Place</li>
                                 </ul>
                                 <p><a class="btn btn-primary btn-lg page-scroll" href="#" role="button">Show More</a></p>
+
+                                {% if Status is defined and Status != NULL %}
+                                    {% if Status == 2 %}
+                                    <p><a class="btn btn-primary btn-sm page-scroll" href="#" role="button"><i class="fa fa-pencil" aria-hidden="true"></i> Modify</a></p>
+                                    {% endif %}
+                                    {% if Status == 1 %}
+                                        <p><a class="btn btn-primary btn-sm page-scroll" href="#" role="button"><i class="fa fa-pencil" aria-hidden="true"></i> Modify</a></p>
+                                        <p><a class="btn btn-primary btn-sm page-scroll" href="#" role="button"><i class="fa fa-trash" aria-hidden="true"></i> Remove Event</a></p>
+                                    {% endif %}
+                                {% else %}
+                                {% endif %}
                             </div>
                         </div>
                     </div>
@@ -679,6 +789,17 @@
                                     <li>In: A really Great Place</li>
                                 </ul>
                                 <p><a class="btn btn-primary btn-lg page-scroll" href="#" role="button">Show More</a></p>
+
+                                {% if Status is defined and Status != NULL %}
+                                    {% if Status == 2 %}
+                                    <p><a class="btn btn-primary btn-sm page-scroll" href="#" role="button"><i class="fa fa-pencil" aria-hidden="true"></i> Modify</a></p>
+                                    {% endif %}
+                                    {% if Status == 1 %}
+                                        <p><a class="btn btn-primary btn-sm page-scroll" href="#" role="button"><i class="fa fa-pencil" aria-hidden="true"></i> Modify</a></p>
+                                        <p><a class="btn btn-primary btn-sm page-scroll" href="#" role="button"><i class="fa fa-trash" aria-hidden="true"></i> Remove Event</a></p>
+                                    {% endif %}
+                                {% else %}
+                                {% endif %}
                             </div>
                         </div>
                     </div>
@@ -715,6 +836,17 @@
                                     <li>In: A really Great Place</li>
                                 </ul>
                                 <p><a class="btn btn-primary btn-lg page-scroll" href="#" role="button">Show More</a></p>
+
+                                {% if Status is defined and Status != NULL %}
+                                    {% if Status == 2 %}
+                                    <p><a class="btn btn-primary btn-sm page-scroll" href="#" role="button"><i class="fa fa-pencil" aria-hidden="true"></i> Modify</a></p>
+                                    {% endif %}
+                                    {% if Status == 1 %}
+                                        <p><a class="btn btn-primary btn-sm page-scroll" href="#" role="button"><i class="fa fa-pencil" aria-hidden="true"></i> Modify</a></p>
+                                        <p><a class="btn btn-primary btn-sm page-scroll" href="#" role="button"><i class="fa fa-trash" aria-hidden="true"></i> Remove Event</a></p>
+                                    {% endif %}
+                                {% else %}
+                                {% endif %}
                             </div>
                         </div>
                     </div>
