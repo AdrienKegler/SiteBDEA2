@@ -42,7 +42,7 @@
                             <a href="#page-top"></a>
                         </li>
                         <li>
-                            <a class="page-scroll" href="#truc"><i class="fa fa-info-circle" aria-hidden="true"></i> Information</a>
+                            <a class="page-scroll" href="#truc"><i class="fa fa-info-circle" aria-hidden="true"></i> Info</a>
                         </li>
                         <li>
                             <a class="page-scroll" href="#portfolio"><i class="fa fa-calendar" aria-hidden="true"></i> Event</a>
@@ -61,28 +61,37 @@
                         </li>
                         
                             {% if user is defined and user != NULL %}
-                            <li>
-                                <a class="page-scroll" href="http://localhost/SiteBDEA2/web/app_dev.php/User/Register">
-                                    <i class="fa fa-user-circle-o" aria-hidden="true">
-                                    </i> {{user}}
-                                </a>
-                            </li>
-                            {% if Status is defined and Status == 'Admin' %}
-                            <li>
-                                <a class="page-scroll" href="#">
-                                    <i class="fa fa-unlock-alt" aria-hidden="true">
-                                    </i> Admin Options
-                                </a>
-                            </li>
-                            {% elseif Status is defined and Status == 'BDE' %}
-                            <li>
-                                <a class="page-scroll" href="#">
-                                    <i class="fa fa-cog" aria-hidden="true">
-                                    </i> BDE Options
-                                </a>
-                            </li> 
-                            {% else %}
-                            {% endif %}}
+                            
+                                {% if Status is defined and Status == 1 %}
+                                <li>
+                                    <a class="page-scroll" href="#">
+                                        <i class="fa fa-unlock-alt" aria-hidden="true">
+                                        </i> Admin Options
+                                    </a>
+                                </li>
+                                {% elseif Status is defined and Status == 2 %}
+                                <li>
+                                    <a class="page-scroll" href="http://localhost/SiteBDEA2/web/app_dev.php/User/Register">
+                                        <i class="fa fa-user-circle-o" aria-hidden="true">
+                                        </i> {{user}}
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="page-scroll" href="#">
+                                        <i class="fa fa-cog" aria-hidden="true">
+                                        </i> BDE
+                                    </a>
+                                </li> 
+                                {% else %}
+                                <li>
+                                    <a class="page-scroll" href="http://localhost/SiteBDEA2/web/app_dev.php/User/Register">
+                                        <i class="fa fa-user-circle-o" aria-hidden="true">
+                                        </i> {{user}}
+                                    </a>
+                                </li>
+                                {% endif %}
+                            {% endif %}
+                            {% if user is defined and user != NULL %}
                             <li> 
                                 <a href="http://localhost/SiteBDEA2/web/app_dev.php/SigningOut">
                                             <i class="fa fa-sign-out" aria-hidden="true">
@@ -525,7 +534,7 @@
                                     <li>Contact: ME !</li>
                                     <li>In: A really Great Place</li>
                                 </ul>
-                                <p><a class="btn btn-primary btn-lg page-scroll" href="#" role="button">Show More</a></p>
+                                <p><a class="btn btn-primary btn-lg page-scroll" href="http://localhost/SiteBDEA2/web/app_dev.php/Event/Event" role="button">Show More</a></p>
                             </div>
                         </div>
                     </div>
