@@ -15,7 +15,7 @@ class ConnexionHiddenController extends Controller
 			->getManager()
 			->getRepository('SiteBDEUserSystemBundle:User');
 
-		$listUsers = $repository->findByPseudo($_POST['inputPassword']);
+		$listUsers = $repository->findByPseudo($_POST['inputPseudo']);
 		foreach ($listUsers as $key => $value) {
 			if (password_verify ( $_POST['inputPassword'] , $value->getPassWord()) === TRUE ) {
 				$User = $value;
