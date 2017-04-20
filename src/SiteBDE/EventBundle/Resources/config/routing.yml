@@ -9,7 +9,12 @@ site_bde_event_Form:
 site_bde_event_Gallery:
     path:     /Gallery
     defaults: { _controller: SiteBDEEventBundle:Gallery:index }
+<<<<<<< HEAD
     
  site_bde_event_List:
+=======
+
+site_bde_event_List:
+>>>>>>> origin/master
     path:     /List
     defaults: { _controller: SiteBDEEventBundle:EventList:EventList }
